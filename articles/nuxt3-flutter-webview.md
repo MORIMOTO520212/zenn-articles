@@ -35,19 +35,12 @@ published: false
 この構成で難しいのは、**通信の向きによって手段がまったく異なる**点です。
 
 ```mermaid
-sequenceDiagram
-    participant Flutter as Flutter (Native)
-    participant Nuxt as Nuxt3 SPA (WebView)
+flowchart LR
+    F["Flutter\n(Native)"]
+    N["Nuxt3 SPA\n(WebView)"]
 
-    Note over Flutter,Nuxt: Flutter → Nuxt（window 経由）
-    Flutter->>Nuxt: window.FGoBack()
-    Flutter->>Nuxt: window.FSetCurrentLocation(location)
-    Flutter->>Nuxt: window.FOpenPushNotification(pushId)
-
-    Note over Flutter,Nuxt: Nuxt → Flutter（Bridge 経由）
-    Nuxt->>Flutter: sendMessage({ action: 'openSettings' })
-    Nuxt->>Flutter: sendMessage({ action: 'getPlatform' })
-    Flutter-->>Nuxt: 'ios' | 'android'
+    F -->|"① window.F*() を直接呼び出す"| N
+    N -->|"② sendMessage() でブリッジ経由"| F
 ```
 
 | 方向 | 手段 |
