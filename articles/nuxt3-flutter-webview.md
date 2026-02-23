@@ -36,8 +36,8 @@ published: false
 
 ```mermaid
 flowchart LR
-    F["Flutter\n(Native)"]
-    N["Nuxt3 SPA\n(WebView)"]
+    F["Flutter<br>(Native)"]
+    N["Nuxt3 SPA<br>(WebView)"]
 
     F -->|"① window.F*() を直接呼び出す"| N
     N -->|"② sendMessage() でブリッジ経由"| F
