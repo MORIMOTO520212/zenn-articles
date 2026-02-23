@@ -3,7 +3,7 @@ title: "Nuxt3 SPA を Flutter WebView に組み込む — 双方向通信の全�
 emoji: "🌉"
 type: "tech"
 topics: ["Nuxt", "Flutter", "WebView", "TypeScript", "Vue"]
-published: false
+published: true
 publication_name: "sonicmoov"
 ---
 
