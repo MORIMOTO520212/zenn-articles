@@ -4,6 +4,7 @@ emoji: "🌉"
 type: "tech"
 topics: ["Nuxt", "Flutter", "WebView", "TypeScript", "Vue"]
 published: false
+publication_name: "sonicmoov"
 ---
 
 ## この記事で分かること
