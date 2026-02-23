@@ -34,24 +34,20 @@ published: false
 
 この構成で難しいのは、**通信の向きによって手段がまったく異なる**点です。
 
-```
-┌─────────────────────────────────────────┐
-│             Flutter (Native)            │
-│                                         │
-│  window.FSetCurrentLocation(location)   │  ← Flutter が JS を直接呼ぶ
-│  window.FGoBack()                       │
-│                                         │
-│      ↑ Flutter → Nuxt の通信           │
-│      ↓ Nuxt → Flutter の通信           │
-│                                         │
-│  webViewJavaScriptBridge.sendMessage()  │  ← Nuxt がブリッジ経由で送る
-│                                         │
-└─────────────────────────────────────────┘
-                    │
-            ┌───────────────┐
-            │  WebView      │
-            │  Nuxt3 SPA    │
-            └───────────────┘
+```mermaid
+sequenceDiagram
+    participant Flutter as Flutter (Native)
+    participant Nuxt as Nuxt3 SPA (WebView)
+
+    Note over Flutter,Nuxt: Flutter → Nuxt（window 経由）
+    Flutter->>Nuxt: window.FGoBack()
+    Flutter->>Nuxt: window.FSetCurrentLocation(location)
+    Flutter->>Nuxt: window.FOpenPushNotification(pushId)
+
+    Note over Flutter,Nuxt: Nuxt → Flutter（Bridge 経由）
+    Nuxt->>Flutter: sendMessage({ action: 'openSettings' })
+    Nuxt->>Flutter: sendMessage({ action: 'getPlatform' })
+    Flutter-->>Nuxt: 'ios' | 'android'
 ```
 
 | 方向 | 手段 |
