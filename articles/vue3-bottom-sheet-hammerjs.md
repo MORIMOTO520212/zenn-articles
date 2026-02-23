@@ -4,7 +4,6 @@ emoji: "👆"
 type: "tech"
 topics: ["Vue", "Nuxt", "TypeScript", "HammerJS", "UI"]
 published: false
-publication_name: "sonicmoov"
 ---
 
 ## この記事で分かること
