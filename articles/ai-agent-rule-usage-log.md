@@ -54,7 +54,7 @@ AIエージェント（Claude Codeなど）を使った開発では、プロジ�
 
 実際のログはこのように記録されます：
 
-![実際のRULES_USAGE_LOG.mdの記録例](/images/103.png)
+![実際のRULES_USAGE_LOG.mdの記録例](https://storage.googleapis.com/zenn-user-upload/e2934024c51e-20260224.png)
 *VSCodeのdiffビューで見たログエントリ*
 
 ### ルールファイルへの組み込み
@@ -105,7 +105,7 @@ AIが実装判断においてルールファイル（`AGENTS.md` / `CLAUDE.md`�
 
 実際の例：
 
-![テストファイルの配置を判断する際にルールを参照](/images/101.png)
+![テストファイルの配置を判断する際にルールを参照](https://storage.googleapis.com/zenn-user-upload/966a9ad442f8-20260224.png)
 *テストパターンを確認する際、AGENTS.mdのルールに従ってテストファイルを作成する判断をしている*
 
 ### 記録時の確認プロセス
@@ -124,7 +124,7 @@ AIが実装判断においてルールファイル（`AGENTS.md` / `CLAUDE.md`�
 
 実際にこの仕組みを運用すると、AIエージェントがルールを参照する様子を可視化できます。
 
-![Claude CodeがAGENTS.mdのルールを参照している様子](/images/001.png)
+![Claude CodeがAGENTS.mdのルールを参照している様子](https://storage.googleapis.com/zenn-user-upload/3462c569ef98-20260224.png)
 *テスト作成時に、AGENTS.mdの「単体テストのルール」を確認している場面*
 
 ### 実際の記録例
@@ -210,10 +210,10 @@ AIが実装判断においてルールファイル（`AGENTS.md` / `CLAUDE.md`�
 
 実際の動作例：
 
-![ルール参照後、RULES_USAGE_LOG.mdへの記録を宣言](/images/102.png)
+![ルール参照後、RULES_USAGE_LOG.mdへの記録を宣言](https://storage.googleapis.com/zenn-user-upload/68a75e419766-20260224.png)
 *ルールを参照した後、ログに記録することを宣言*
 
-![Rule Evaluation Policyに従ったチェック完了の報告](/images/002.png)
+![Rule Evaluation Policyに従ったチェック完了の報告](https://storage.googleapis.com/zenn-user-upload/544aadaa1120-20260224.png)
 *作業完了時に自動的にチェックが実行され、報告される*
 
 ### 最新のログを上部に配置
