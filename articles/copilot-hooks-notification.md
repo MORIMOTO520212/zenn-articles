@@ -1,5 +1,5 @@
 ---
-title: "GitHub Copilot CLIのhooksでタスク完了通知を実装してみた"
+title: "GitHub Copilot CLI - hooksとalerterでタスク完了時に通知してくれる仕組み作った"
 emoji: "🔔"
 type: "tech"
 topics: ["githubcopilot", "mac", "shell", "cli"]
