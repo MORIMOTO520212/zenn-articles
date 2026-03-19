@@ -40,6 +40,13 @@ alerter --title 'テスト' --message '通知のテストです' --sound default
 
 Mac の通知センターに通知が届けば OK です。
 
+:::message
+**通知が届かない場合は通知の許可設定を確認してください。**
+`システム設定 > 通知 > ターミナル` を開き、通知を「許可」にする必要があります。この設定が OFF になっていると通知が一切届きません。
+:::
+
+![通知設定](/images/copilot-hooks-notification/notification-settings.png)
+
 ---
 
 ## 2. hooks.json を作成する
