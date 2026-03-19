@@ -4,6 +4,7 @@ emoji: "🍇"
 type: "tech"
 topics: ["githubcopilot", "mac", "shell", "cli"]
 published: true
+publication_name: "sonicmoov"
 ---
 
 ## はじめに
