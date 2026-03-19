@@ -84,9 +84,7 @@ touch .github/hooks/hooks.json
 
 Copilot CLI でタスクを実行してセッションが終了すると、Mac の通知センターに以下のような通知が表示されます。
 
-- **タイトル**: プロジェクト名
-- **メッセージ**: タスクが完了しました。
-- **サウンド**: デフォルトの通知音
+![通知](https://storage.googleapis.com/zenn-user-upload/cc083242f2ac-20260319.png)
 
 タスクを依頼して別のウィンドウで作業しながら待てるようになりました！
 
