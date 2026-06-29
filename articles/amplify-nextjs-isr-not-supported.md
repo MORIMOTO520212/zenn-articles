@@ -1,5 +1,5 @@
 ---
-title: "AWS AmplifyはNext.jsのオンデマンドISRをサポートしていない"
+title: "AmplifyはNext.jsのオンデマンドISRをサポートしていない"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nextjs", "amplify", "aws", "isr"]
 published: true
