@@ -22,6 +22,18 @@ AWS公式ドキュメントに明記されていた。
 - `revalidateTag(tag)` — タグベースの再検証
 - `revalidatePath(path)` — パスベースの再検証
 
+## time-based revalidationも動作が保証されない
+
+`revalidate: 60` のような時間ベースのISRも、Amplifyでは期待通りに動作しない可能性がある。
+
+Next.jsはtime-based ISRで `cache-control: s-maxage=N, stale-while-revalidate` を設定するが、AmplifyのCDNであるCloudFrontが `stale-while-revalidate` をサポートしていないため、再検証のタイミングが仕様通りにならない。
+
+> AWS Amplify's CDN Amazon CloudFront does not currently support `stale-while-revalidate`
+>
+> https://github.com/aws-amplify/amplify-hosting/blob/main/FAQ.md
+
+オンデマンドISRのように「非対応」と明記されているわけではないが、動作の保証はない。
+
 ## 対処法
 
 `force-dynamic` や `cache: 'no-store'` でキャッシュを無効化する。
